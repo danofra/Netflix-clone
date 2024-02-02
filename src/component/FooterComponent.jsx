@@ -53,7 +53,7 @@ function FooterComponent() {
       <Row className="justify-content-start mt-3">
         <Col className="col col-md-6 d-flex p-0 offset-2">
           <div className="p-2">
-            <p>&copy; 1997-2019 Netflix, Inc.</p>
+            <p>By Liborio Daniele Frasca &copy; 1997-2019 Netflix, Inc.</p>
           </div>
         </Col>
       </Row>
