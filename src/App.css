@@ -37,7 +37,8 @@
   }
 }
 
-.bg-new {
-  background: #141414;
-  color: white;
+@media (max-width: 768px) {
+  .mobile-collapse {
+    display: hidden;
+  }
 }

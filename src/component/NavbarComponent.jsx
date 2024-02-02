@@ -9,7 +9,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 function NavbarComponent() {
   return (
     <>
-      <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+      <Navbar bg="dark" data-bs-theme="dark">
         <Container fluid>
           <Navbar.Brand href="#home">
             <Image
@@ -20,7 +20,7 @@ function NavbarComponent() {
               loading="lazy"
             />
           </Navbar.Brand>
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" className="mobile-collapse">
             <Nav className="me-auto">
               <Nav.Link href="#home" active>
                 Home
@@ -35,13 +35,13 @@ function NavbarComponent() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto d-flex flex-row justify-content-end">
               <Nav.Link href="#search" className="me-2">
-                <i class="bi bi-search"></i>
+                <i className="bi bi-search"></i>
               </Nav.Link>
               <Nav.Link href="#kids">KIDS</Nav.Link>
               <Nav.Link href="#notification" className="me-2">
-                <div class="ms-3 position-relative">
-                  <i class="bi bi-bell"></i>
-                  <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></span>
+                <div className="ms-3 position-relative">
+                  <i className="bi bi-bell"></i>
+                  <span className="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></span>
                 </div>
               </Nav.Link>
               <NavDropdown
@@ -49,6 +49,7 @@ function NavbarComponent() {
                   <Image src="./assets/img/avatar.png" width="30" height="30" />
                 }
                 id="basic-nav-dropdown"
+                align={{ lg: "end", md: "end", sm: "end", xs: "end" }}
               >
                 <NavDropdown.Item href="#gestioni-profili">
                   Gestione Profili
