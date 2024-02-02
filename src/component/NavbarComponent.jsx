@@ -9,7 +9,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 function NavbarComponent() {
   return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar expand="lg" bg="dark" data-bs-theme="dark">
         <Container fluid>
           <Navbar.Brand href="#home">
             <Image
@@ -20,7 +20,8 @@ function NavbarComponent() {
               loading="lazy"
             />
           </Navbar.Brand>
-          <Navbar.Collapse id="basic-navbar-nav" className="mobile-collapse">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home" active>
                 Home
@@ -49,7 +50,7 @@ function NavbarComponent() {
                   <Image src="./assets/img/avatar.png" width="30" height="30" />
                 }
                 id="basic-nav-dropdown"
-                align={{ lg: "end", md: "end", sm: "end", xs: "end" }}
+                /* align={{ lg: "end", md: "end", sm: "end", xs: "end" }} */
               >
                 <NavDropdown.Item href="#gestioni-profili">
                   Gestione Profili

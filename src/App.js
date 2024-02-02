@@ -1,8 +1,9 @@
 import "./App.css";
 import NavbarComponent from "./component/NavbarComponent";
-import FooterComponent from "./component/FooterComponent";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FooterComponent from "./component/FooterComponent";
+import FilmlistComponent from "./component/FilmlistComponent";
 
 function App() {
   return (
@@ -10,8 +11,10 @@ function App() {
       <header>
         <NavbarComponent />
       </header>
-      <main></main>
-      <footer>
+      <main className=" container-fluid text-bg-dark">
+        <FilmlistComponent />
+      </main>
+      <footer className=" container-fluid text-bg-dark pt-5">
         <FooterComponent />
       </footer>
     </>
