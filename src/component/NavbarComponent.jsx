@@ -5,8 +5,10 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "react-bootstrap/Image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function NavbarComponent() {
+  const location = useLocation();
   return (
     <>
       <Navbar expand="lg" bg="dark" data-bs-theme="dark">
@@ -23,11 +25,25 @@ function NavbarComponent() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home" active>
+              <Link
+                to="/"
+                className={
+                  location.pathname === "/" ? "nav-link active" : "nav-link"
+                }
+              >
                 Home
-              </Nav.Link>
+              </Link>
               <Nav.Link href="#link">Serie TV</Nav.Link>
-              <Nav.Link href="#film">Film</Nav.Link>
+              <Link
+                to="/TvshowComponent"
+                className={
+                  location.pathname === "/TvshowComponent"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Film
+              </Link>
               <Nav.Link href="#nuovi-e-popolari">Nuovi e popolari</Nav.Link>
               <Nav.Link href="#la-mia-lista">La mia lista</Nav.Link>
               <Nav.Link href="#sfoglia-la-lingua">Sfoglia per lingua</Nav.Link>

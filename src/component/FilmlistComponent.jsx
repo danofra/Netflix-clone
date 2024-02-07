@@ -8,29 +8,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 function FilmlistComponent() {
   return (
     <>
-      <article className="container-fluid d-flex justify-content-between align-items-center">
-        <div className="d-flex justify-content-center align-items-center">
-          <div>
-            <h1 className="text-bg-dark me-5">TV Shows</h1>
-          </div>
-          <div>
-            <select
-              className="form-select text-bg-dark"
-              aria-label="Default select example"
-            >
-              <option selected>Genere</option>
-              <option>Action</option>
-              <option>Commedy</option>
-              <option>Three</option>
-              <option>Horror</option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <i class="bi bi-grid icons me-3"></i>
-          <i class="bi bi-grid-3x3 icons"></i>
-        </div>
-      </article>
       <Container fluid>
         <Row className="justify-content-center">
           <h3 className="mt-5 mb-5">Harry Potter</h3>
