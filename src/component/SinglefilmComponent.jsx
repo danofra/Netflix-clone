@@ -49,7 +49,10 @@ class SinglefilmComponent extends Component {
             className="p-3"
             key={film.imdbID}
           >
-            <Link to={"/MoviedetailsComponent"} >
+            <Link
+              to={"/MoviedetailsComponent/" + film.imdbID}
+              key={film.imdbID}
+            >
               <Image
                 src={film.Poster}
                 width="100%"

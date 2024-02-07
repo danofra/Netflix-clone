@@ -27,11 +27,12 @@ function MoviedetailsComponent() {
       .then((data) => {
         setMovie(data);
         console.log(data);
-      });
+      })
+      .catch((error) => console.log("Error fetching movies:", error));
   };
   useEffect(() => {
     film();
-  });
+  }, []);
   return (
     <>
       <Container fluid>
