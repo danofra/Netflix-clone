@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 import SpinnerComponent from "./SpinnerComponent";
+import { Link } from "react-router-dom";
 
 class SinglefilmComponent extends Component {
   state = {
@@ -48,12 +49,14 @@ class SinglefilmComponent extends Component {
             className="p-3"
             key={film.imdbID}
           >
-            <Image
-              src={film.Poster}
-              width="100%"
-              height="100%"
-              className="scale"
-            />
+            <Link to={"/MoviedetailsComponent"} >
+              <Image
+                src={film.Poster}
+                width="100%"
+                height="100%"
+                className="scale"
+              />
+            </Link>
           </Col>
         );
       })
