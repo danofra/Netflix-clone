@@ -19,7 +19,7 @@ function MoviedetailsComponent() {
     fetch(`http://www.omdbapi.com/?apikey=2f163bb0&i=${movieid.movieid}`)
       .then((response) => {
         if (response.ok) {
-          response.json();
+          return response.json();
         } else {
           console.log("error");
         }
