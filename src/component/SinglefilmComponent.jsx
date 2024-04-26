@@ -13,7 +13,7 @@ class SinglefilmComponent extends Component {
 
   fetchMovies = () => {
     this.setState({ ...this.state, isLoaded: true });
-    fetch("http://www.omdbapi.com/?apikey=2f163bb0&s=" + this.props.film)
+    fetch("http://www.omdbapi.com/?apikey=6ec301f8&s=" + this.props.film)
       .then((response) => {
         if (response.ok) {
           return response.json();
