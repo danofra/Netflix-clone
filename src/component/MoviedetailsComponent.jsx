@@ -16,7 +16,7 @@ function MoviedetailsComponent() {
   console.log(movieid);
   const [movie, setMovie] = useState(null);
   const film = () => {
-    fetch(`http://www.omdbapi.com/?apikey=6ec301f8&i=${movieid.movieid}`)
+    fetch(`http://www.omdbapi.com/?apikey=6ec301f8&s=${movieid.movieid}`)
       .then((response) => {
         if (response.ok) {
           return response.json();
